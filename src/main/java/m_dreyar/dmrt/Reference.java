@@ -12,7 +12,7 @@ public class Reference {
 	public static final String COMMON_PROXY = "m_dreyar.dmrt.proxy.CommonProxy";
 
 	public static enum Items {
-		TESTITEM("testItem", "test_item"), TESTINGOT("testIngot", "test_ingot");
+		TESTITEM("testItem", "test_item"), TESTINGOT("testIngot", "test_ingot"), TESTSWORD("testSword", "test_sword");
 
 		private String unlocalizedName;
 		private String registryName;

@@ -1,5 +1,6 @@
 item.testItem.name=Test Item
 item.testIngot.name=Test Ingot
+item.testSword.name=Test Sword
 
 tile.testBlock.name=Test Block
 

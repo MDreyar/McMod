@@ -2,15 +2,19 @@
   "type": "minecraft:crafting_shaped",
   "pattern": [
     "#",
-    "#"
+    "#",
+    "I"
   ],
   "key": {
     "#": {
       "item": "dmrt:test_ingot"
+    },
+    "I": {
+    	"item": "minecraft:stick"
     }
   },
   "result": {
-    "item": "dmrt:test_item",
-    "count": 4
+    "item": "dmrt:test_sword",
+    "data": 0
   }
 }
