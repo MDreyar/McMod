@@ -1,8 +1,8 @@
 package m_dreyar.dmrt;
 
-import m_dreyar.dmrt.init.RegisterBlocks;
-import m_dreyar.dmrt.init.RegisterItems;
-import m_dreyar.dmrt.init.RegisterRecipies;
+import m_dreyar.dmrt.init.ModBlocks;
+import m_dreyar.dmrt.init.ModItems;
+import m_dreyar.dmrt.init.ModRecipies;
 import m_dreyar.dmrt.proxy.CommonProxy;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraftforge.fml.common.Mod;
@@ -22,18 +22,18 @@ public class Main {
 
 	@EventHandler
 	public static void preInit(FMLPreInitializationEvent event) {
-		RegisterItems.init(); // Initialize all items
-		RegisterItems.register(); // Register all items
+		ModItems.init(); // Initialize all items
+		ModItems.register(); // Register all items
 
-		RegisterBlocks.init(); // Initialize all blocks
-		RegisterBlocks.register(); // Registers all blocks
+		ModBlocks.init(); // Initialize all blocks
+		ModBlocks.register(); // Registers all blocks
 	}
 
 	@EventHandler
 	public static void init(FMLInitializationEvent event) {
 		proxy.init(); // Run necessary initialization code for current proxy
 		
-		RegisterRecipies.register();
+		ModRecipies.register();
 	}
 
 	@EventHandler

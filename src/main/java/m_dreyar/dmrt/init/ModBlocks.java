@@ -9,7 +9,7 @@ import net.minecraft.item.ItemBlock;
 import net.minecraftforge.fml.common.registry.ForgeRegistries;
 
 // Handles the initialization and registration of blocks
-public class RegisterBlocks {
+public class ModBlocks {
 
 	public static Block testBlock;
 	

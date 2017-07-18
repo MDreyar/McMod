@@ -1,6 +1,6 @@
 package m_dreyar.dmrt.init;
 
-public class RegisterRecipies {
+public class ModRecipies {
 
 	public static void register(){
 		

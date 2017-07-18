@@ -8,7 +8,7 @@ import net.minecraft.item.Item;
 import net.minecraftforge.fml.common.registry.ForgeRegistries;
 
 // Handles the initialization and registration of items and their textures
-public class RegisterItems {
+public class ModItems {
 
 	public static Item testItem;
 	public static Item testIngot;
