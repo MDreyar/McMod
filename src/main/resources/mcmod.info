@@ -1,0 +1,12 @@
+[
+{
+  "modid": "dmrt",
+  "name": "Dreyar's many random things",
+  "description": "Just a collection of random stuff to learn modding",
+  "version": "1.12 - 0.0.1.0",
+  "mcversion": "1.12",
+  "authorList": ["M_Dreyar"],
+  "screenshots": [],
+  "dependencies": []
+}
+]
