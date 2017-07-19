@@ -3,6 +3,7 @@ package m_dreyar.dmrt;
 import m_dreyar.dmrt.init.ModBlocks;
 import m_dreyar.dmrt.init.ModItems;
 import m_dreyar.dmrt.init.ModRecipies;
+import m_dreyar.dmrt.init.ModTileEntities;
 import m_dreyar.dmrt.proxy.CommonProxy;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraftforge.fml.common.Mod;
@@ -34,6 +35,7 @@ public class Main {
 		proxy.init(); // Run necessary initialization code for current proxy
 		
 		ModRecipies.register();
+		ModTileEntities.register();
 	}
 
 	@EventHandler
