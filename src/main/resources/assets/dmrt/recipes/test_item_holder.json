@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "# #",
+    "#C#",
+    " # "
+  ],
+  "key": {
+    "#": {
+      "item": "dmrt:test_ingot"
+    },
+    "C": {
+      "item": "minecraft:chest"
+    }
+  },
+  "result": {
+    "item": "dmrt:test_item_holder"
+  }
+}

@@ -7,7 +7,7 @@ import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.tileentity.TileEntity;
 
 // A simple tile entity that stores test items
-public class TileEntityTestBlock extends TileEntity{
+public class TileEntityTestItemHolder extends TileEntity{
 	private int amountOfSticks = 0;
 	private final int MAXSTICKS = 8;
 	

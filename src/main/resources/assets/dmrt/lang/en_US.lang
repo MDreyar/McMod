@@ -1,7 +1,9 @@
-item.testItem.name=Test Item
-item.testIngot.name=Test Ingot
-item.testSword.name=Test Sword
+item.testItem.name=Testium Rod
+item.testIngot.name=Testium Ingot
+item.testSword.name=Testium Sword
 
-tile.testBlock.name=Test Block
+tile.testBlock.name=Testium Block
+tile.testOre.name=Testium Ore
+tile.testItemHolder.name=Testium Rod Storage
 
 itemGroup.tabDMRT=Dreyar's Many Random Things

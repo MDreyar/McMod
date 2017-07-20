@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "###",
+    "###",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "dmrt:test_ingot"
+    }
+  },
+  "result": {
+    "item": "dmrt:test_block"
+  }
+}

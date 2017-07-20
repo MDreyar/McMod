@@ -4,6 +4,7 @@ import m_dreyar.dmrt.init.ModBlocks;
 import m_dreyar.dmrt.init.ModItems;
 import m_dreyar.dmrt.init.ModRecipies;
 import m_dreyar.dmrt.init.ModTileEntities;
+import m_dreyar.dmrt.init.ModWorldGen;
 import m_dreyar.dmrt.proxy.CommonProxy;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraftforge.fml.common.Mod;
@@ -18,7 +19,7 @@ public class Main {
 
 	@SidedProxy(modId = Reference.MOD_ID, clientSide = Reference.CLIENT_PROXY, serverSide = Reference.COMMON_PROXY)
 	public static CommonProxy proxy; // Contains a CommonProxy or ClientProxy
-	
+
 	public static final CreativeTabs CREATIVETAB = new CreativeTab();
 
 	@EventHandler
@@ -33,9 +34,10 @@ public class Main {
 	@EventHandler
 	public static void init(FMLInitializationEvent event) {
 		proxy.init(); // Run necessary initialization code for current proxy
-		
-		ModRecipies.register();
-		ModTileEntities.register();
+
+		ModRecipies.register(); // Register all smelting recipes
+		ModTileEntities.register(); // Register all TileEntities
+		ModWorldGen.registerWorldGenerators(); // Register all world generators
 	}
 
 	@EventHandler
