@@ -32,7 +32,9 @@ public class Reference {
 	}
 
 	public static enum Blocks {
-		TESTBLOCK("testBlock", "test_block"), TESTORE("testOre", "test_ore"), TESTITEMHOLDER("testItemHolder", "test_item_holder");
+		TESTBLOCK("testBlock", "test_block"),
+		TESTORE("testOre", "test_ore"),
+		TESTITEMHOLDER("testItemHolder", "test_item_holder");
 
 		private String unlocalizedName;
 		private String registryName;

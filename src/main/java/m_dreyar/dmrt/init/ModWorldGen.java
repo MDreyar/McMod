@@ -5,7 +5,8 @@ import net.minecraftforge.fml.common.registry.GameRegistry;
 
 public class ModWorldGen {
 
-	public static void registerWorldGenerators(){
+	// Register all world generators
+	public static void registerWorldGenerators() {
 		GameRegistry.registerWorldGenerator(new GenOre(), 0);
 	}
 }

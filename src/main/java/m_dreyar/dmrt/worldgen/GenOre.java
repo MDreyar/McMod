@@ -23,10 +23,10 @@ public class GenOre implements IWorldGenerator {
 	@Override
 	public void generate(Random random, int chunkX, int chunkZ, World world, IChunkGenerator chunkGenerator, IChunkProvider chunkProvider) {
 		final BlockPos chunkPos = new BlockPos(chunkX * 16, 0, chunkZ * 16);
-		
+
 		switch (world.provider.getDimensionType()) {
 		case OVERWORLD:
-			for(int i = 0; i < 16; i++) {
+			for (int i = 0; i < 16; i++) {
 				oreGenOverworld.generate(world, random, chunkPos.add(random.nextInt(16), random.nextInt(53) + 10, random.nextInt(16)));
 			}
 			break;

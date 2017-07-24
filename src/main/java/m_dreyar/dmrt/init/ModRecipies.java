@@ -5,7 +5,8 @@ import net.minecraftforge.fml.common.registry.GameRegistry;
 
 public class ModRecipies {
 
-	public static void register() {
+	// Register all smelting recipes
+	public static void registerSmelting() {
 		GameRegistry.addSmelting(ModBlocks.testOre, new ItemStack(ModItems.testIngot, 1), 50f);
 	}
 }

@@ -8,16 +8,16 @@ import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.network.NetworkManager;
 import net.minecraft.network.play.server.SPacketUpdateTileEntity;
 import net.minecraft.tileentity.TileEntity;
-import net.minecraft.world.World;
 
 // A simple tile entity that stores test items
-public class TileEntityTestItemHolder extends TileEntity{
+public class TileEntityTestItemHolder extends TileEntity {
 	private int amountOfSticks = 0;
 	private final int MAXSTICKS = 8;
-	
-	public boolean putStick(){
-		if(!world.isRemote){
-			if(amountOfSticks < MAXSTICKS){
+
+	// Attempt to put a testItem in the TileEntity
+	public boolean putStick() {
+		if (!world.isRemote) {
+			if (amountOfSticks < MAXSTICKS) {
 				amountOfSticks++;
 				this.markDirty();
 				IBlockState state = world.getBlockState(pos);
@@ -27,10 +27,11 @@ public class TileEntityTestItemHolder extends TileEntity{
 		}
 		return false;
 	}
-	
-	public void takeStick(){
-		if(!world.isRemote){
-			if(amountOfSticks > 0){
+
+	// Attempts to take a testItem from the TileEntity
+	public void takeStick() {
+		if (!world.isRemote) {
+			if (amountOfSticks > 0) {
 				world.spawnEntity(new EntityItem(world, pos.getX() + 0.5, pos.getY() + 1, pos.getZ() + 0.5, new ItemStack(ModItems.testItem)));
 				amountOfSticks--;
 				this.markDirty();
@@ -39,10 +40,10 @@ public class TileEntityTestItemHolder extends TileEntity{
 			}
 		}
 	}
-	
-	public void takeAllSticks(){
-		if(!world.isRemote){
-			if(amountOfSticks > 0){
+
+	public void takeAllSticks() {
+		if (!world.isRemote) {
+			if (amountOfSticks > 0) {
 				world.spawnEntity(new EntityItem(world, pos.getX() + 0.5, pos.getY() + 0.5, pos.getZ() + 0.5, new ItemStack(ModItems.testItem, amountOfSticks)));
 				amountOfSticks = 0;
 				this.markDirty();
@@ -51,46 +52,49 @@ public class TileEntityTestItemHolder extends TileEntity{
 			}
 		}
 	}
-	
-	public int getStickCount(){
+
+	// Returns the amount of testItems in the TileEntity
+	public int getStickCount() {
 		return amountOfSticks;
 	}
-	
-	public void writeUpdateTag(NBTTagCompound tag){
+
+	// Write data to the NBT tag
+	public void writeUpdateTag(NBTTagCompound tag) {
 		tag.setInteger("stickCount", amountOfSticks);
 	}
-	
-	public void readUpdateTag(NBTTagCompound tag){
+
+	// Read data from the NBT tag
+	public void readUpdateTag(NBTTagCompound tag) {
 		this.amountOfSticks = tag.getInteger("stickCount");
 	}
-	
+
 	@Override
 	public NBTTagCompound writeToNBT(NBTTagCompound compound) {
 		super.writeToNBT(compound);
 		writeUpdateTag(compound);
 		return compound;
 	}
-	
+
 	@Override
 	public void readFromNBT(NBTTagCompound compound) {
 		super.readFromNBT(compound);
 		readUpdateTag(compound);
 	}
-	
+
 	@Override
 	public SPacketUpdateTileEntity getUpdatePacket() {
 		NBTTagCompound tag = new NBTTagCompound();
 		writeUpdateTag(tag);
 		return new SPacketUpdateTileEntity(pos, getBlockMetadata(), tag);
 	}
-	
+
 	@Override
 	public NBTTagCompound getUpdateTag() {
 		NBTTagCompound tag = super.getUpdateTag();
 		writeUpdateTag(tag);
 		return tag;
 	}
-	
+
 	@Override
 	public void onDataPacket(NetworkManager net, SPacketUpdateTileEntity pkt) {
 		NBTTagCompound tag = pkt.getNbtCompound();

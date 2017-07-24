@@ -1,10 +1,5 @@
 package m_dreyar.dmrt;
 
-import m_dreyar.dmrt.init.ModBlocks;
-import m_dreyar.dmrt.init.ModItems;
-import m_dreyar.dmrt.init.ModRecipies;
-import m_dreyar.dmrt.init.ModTileEntities;
-import m_dreyar.dmrt.init.ModWorldGen;
 import m_dreyar.dmrt.proxy.CommonProxy;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraftforge.fml.common.Mod;
@@ -24,24 +19,16 @@ public class Main {
 
 	@EventHandler
 	public static void preInit(FMLPreInitializationEvent event) {
-		ModItems.init(); // Initialize all items
-		ModItems.register(); // Register all items
-
-		ModBlocks.init(); // Initialize all blocks
-		ModBlocks.register(); // Registers all blocks
+		proxy.preInit();
 	}
 
 	@EventHandler
 	public static void init(FMLInitializationEvent event) {
-		proxy.init(); // Run necessary initialization code for current proxy
-
-		ModRecipies.register(); // Register all smelting recipes
-		ModTileEntities.register(); // Register all TileEntities
-		ModWorldGen.registerWorldGenerators(); // Register all world generators
+		proxy.init();
 	}
 
 	@EventHandler
 	public static void postInit(FMLPostInitializationEvent event) {
-
+		proxy.postInit();
 	}
 }

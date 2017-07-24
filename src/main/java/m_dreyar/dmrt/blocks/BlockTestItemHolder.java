@@ -27,22 +27,24 @@ public class BlockTestItemHolder extends Block implements ITileEntityProvider {
 		setHardness(5.0F);
 		setResistance(10.0F);
 	}
-	
+
 	@Override
 	public boolean isFullBlock(IBlockState state) {
 		return false;
 	}
-	
+
 	@Override
 	public boolean isOpaqueCube(IBlockState state) {
 		return false;
 	}
-	
+
 	@Override
 	public BlockRenderLayer getBlockLayer() {
 		return BlockRenderLayer.CUTOUT_MIPPED;
 	}
 
+	// If player is holding testItem, try to put it in the block, else try to
+	// get a testItem from the block
 	@Override
 	public boolean onBlockActivated(World worldIn, BlockPos pos, IBlockState state, EntityPlayer playerIn, EnumHand hand, EnumFacing facing, float hitX, float hitY, float hitZ) {
 		if (!worldIn.isRemote) {
@@ -67,6 +69,7 @@ public class BlockTestItemHolder extends Block implements ITileEntityProvider {
 		return true;
 	}
 
+	// When the block is broken drop all testItem's currently in the block
 	@Override
 	public void breakBlock(World worldIn, BlockPos pos, IBlockState state) {
 		if (worldIn.getTileEntity(pos) instanceof TileEntityTestItemHolder) {

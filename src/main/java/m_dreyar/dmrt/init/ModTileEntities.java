@@ -6,7 +6,8 @@ import net.minecraftforge.fml.common.registry.GameRegistry;
 
 public class ModTileEntities {
 
-	public static void register(){
+	// Register all TileEntities
+	public static void register() {
 		GameRegistry.registerTileEntity(TileEntityTestItemHolder.class, Reference.MOD_ID + ":TileEntityTestBlock");
 	}
 }

@@ -16,7 +16,7 @@ public class ModItems {
 	public static Item testItem;
 	public static Item testIngot;
 	public static Item testSword;
-	
+
 	public static ToolMaterial TESTMATERIAL = EnumHelper.addToolMaterial("TESTMATERIAL", 2, 500, 8.0F, 3.0F, 14);
 
 	// Initialized all items
