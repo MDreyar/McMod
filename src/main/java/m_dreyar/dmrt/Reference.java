@@ -12,7 +12,8 @@ public class Reference {
 	public static final String COMMON_PROXY = "m_dreyar.dmrt.proxy.CommonProxy";
 
 	public static enum Items {
-		TESTITEM("testItem", "test_item"), TESTINGOT("testIngot", "test_ingot"), TESTSWORD("testSword", "test_sword");
+		TESTITEM("testItem", "test_item"), TESTINGOT("testIngot", "test_ingot"), TESTSWORD("testSword", "test_sword"),
+		RECALL("recall", "recall");
 
 		private String unlocalizedName;
 		private String registryName;
@@ -32,9 +33,8 @@ public class Reference {
 	}
 
 	public static enum Blocks {
-		TESTBLOCK("testBlock", "test_block"),
-		TESTORE("testOre", "test_ore"),
-		TESTITEMHOLDER("testItemHolder", "test_item_holder");
+		TESTBLOCK("testBlock", "test_block"), TESTORE("testOre", "test_ore"),
+		TESTITEMHOLDER("testItemHolder", "test_item_holder"), TELEPORTER("teleporter", "teleporter");
 
 		private String unlocalizedName;
 		private String registryName;

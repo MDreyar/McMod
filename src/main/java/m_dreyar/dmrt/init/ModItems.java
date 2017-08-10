@@ -1,5 +1,6 @@
 package m_dreyar.dmrt.init;
 
+import m_dreyar.dmrt.items.ItemRecall;
 import m_dreyar.dmrt.items.ItemTest;
 import m_dreyar.dmrt.items.ItemTestIngot;
 import m_dreyar.dmrt.items.ItemTestSword;
@@ -16,6 +17,7 @@ public class ModItems {
 	public static Item testItem;
 	public static Item testIngot;
 	public static Item testSword;
+	public static Item recall;
 
 	public static ToolMaterial TESTMATERIAL = EnumHelper.addToolMaterial("TESTMATERIAL", 2, 500, 8.0F, 3.0F, 14);
 
@@ -24,6 +26,7 @@ public class ModItems {
 		testItem = new ItemTest();
 		testIngot = new ItemTestIngot();
 		testSword = new ItemTestSword();
+		recall = new ItemRecall();
 	}
 
 	// Registers all items
@@ -31,6 +34,7 @@ public class ModItems {
 		ForgeRegistries.ITEMS.register(testItem);
 		ForgeRegistries.ITEMS.register(testIngot);
 		ForgeRegistries.ITEMS.register(testSword);
+		ForgeRegistries.ITEMS.register(recall);
 	}
 
 	// Registers the renders for all items
@@ -38,6 +42,7 @@ public class ModItems {
 		registerRender(testItem);
 		registerRender(testIngot);
 		registerRender(testSword);
+		registerRender(recall);
 	}
 
 	// Registers the render for a item

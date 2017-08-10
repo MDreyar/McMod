@@ -1,5 +1,6 @@
 package m_dreyar.dmrt.init;
 
+import m_dreyar.dmrt.blocks.BlockTeleporter;
 import m_dreyar.dmrt.blocks.BlockTest;
 import m_dreyar.dmrt.blocks.BlockTestItemHolder;
 import m_dreyar.dmrt.blocks.BlockTestOre;
@@ -16,12 +17,14 @@ public class ModBlocks {
 	public static Block testBlock;
 	public static Block testOre;
 	public static Block testItemHolder;
+	public static Block teleporter;
 
 	// Initialized all blocks
 	public static void init() {
 		testBlock = new BlockTest();
 		testOre = new BlockTestOre();
 		testItemHolder = new BlockTestItemHolder();
+		teleporter = new BlockTeleporter();
 	}
 
 	// Registers all blocks
@@ -29,6 +32,7 @@ public class ModBlocks {
 		registerBlock(testBlock);
 		registerBlock(testOre);
 		registerBlock(testItemHolder);
+		registerBlock(teleporter);
 	}
 
 	// Registers one block and its item
@@ -44,6 +48,7 @@ public class ModBlocks {
 		registerRender(testBlock);
 		registerRender(testOre);
 		registerRender(testItemHolder);
+		registerRender(teleporter);
 	}
 
 	// Registers the render for a block

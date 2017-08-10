@@ -1,0 +1,7 @@
+{
+	"parent": "block/cube_top",
+	"textures": {
+		"top": "dmrt:blocks/teleporter_top",
+		"side": "dmrt:blocks/test_block"
+	}
+}
