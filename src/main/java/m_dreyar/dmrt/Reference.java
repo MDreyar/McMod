@@ -34,7 +34,8 @@ public class Reference {
 
 	public static enum Blocks {
 		TESTBLOCK("testBlock", "test_block"), TESTORE("testOre", "test_ore"),
-		TESTITEMHOLDER("testItemHolder", "test_item_holder"), TELEPORTER("teleporter", "teleporter");
+		TESTITEMHOLDER("testItemHolder", "test_item_holder"), TESTCHEST("testChest", "test_chest"),
+		TELEPORTER("teleporter", "teleporter");
 
 		private String unlocalizedName;
 		private String registryName;

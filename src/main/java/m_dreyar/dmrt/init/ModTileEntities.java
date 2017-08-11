@@ -2,6 +2,7 @@ package m_dreyar.dmrt.init;
 
 import m_dreyar.dmrt.Reference;
 import m_dreyar.dmrt.tileentity.TileEntityTeleporter;
+import m_dreyar.dmrt.tileentity.TileEntityTestChest;
 import m_dreyar.dmrt.tileentity.TileEntityTestItemHolder;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 
@@ -11,5 +12,6 @@ public class ModTileEntities {
 	public static void register() {
 		GameRegistry.registerTileEntity(TileEntityTestItemHolder.class, Reference.MOD_ID + ":TileEntityTestBlock");
 		GameRegistry.registerTileEntity(TileEntityTeleporter.class, Reference.MOD_ID + ":TileEntityTeleporter");
+		GameRegistry.registerTileEntity(TileEntityTestChest.class, Reference.MOD_ID + ":TileEntityTestChest");
 	}
 }

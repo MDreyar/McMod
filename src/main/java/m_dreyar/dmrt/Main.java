@@ -16,6 +16,9 @@ public class Main {
 	public static CommonProxy proxy; // Contains a CommonProxy or ClientProxy
 
 	public static final CreativeTabs CREATIVETAB = new CreativeTab();
+	
+	@Mod.Instance(Reference.MOD_ID)
+	public static Main instance;
 
 	@EventHandler
 	public static void preInit(FMLPreInitializationEvent event) {

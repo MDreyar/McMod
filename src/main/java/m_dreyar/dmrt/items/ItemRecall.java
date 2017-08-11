@@ -23,6 +23,7 @@ public class ItemRecall extends Item {
 		setUnlocalizedName(Reference.Items.RECALL.getUnlocalizedName());
 		setRegistryName(Reference.Items.RECALL.getRegistryName());
 		setCreativeTab(Main.CREATIVETAB);
+		setMaxStackSize(1);
 	}
 
 	@Override

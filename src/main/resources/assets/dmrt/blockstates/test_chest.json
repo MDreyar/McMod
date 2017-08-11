@@ -1,0 +1,8 @@
+{
+	"variants": {
+		"facing=north": { "model": "dmrt:test_chest" },
+		"facing=east": { "model": "dmrt:test_chest", "y": 90},
+		"facing=south": { "model": "dmrt:test_chest", "y": 180},
+		"facing=west": { "model": "dmrt:test_chest", "y": 270}
+	}
+}

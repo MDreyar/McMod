@@ -2,6 +2,7 @@ package m_dreyar.dmrt.init;
 
 import m_dreyar.dmrt.blocks.BlockTeleporter;
 import m_dreyar.dmrt.blocks.BlockTest;
+import m_dreyar.dmrt.blocks.BlockTestChest;
 import m_dreyar.dmrt.blocks.BlockTestItemHolder;
 import m_dreyar.dmrt.blocks.BlockTestOre;
 import net.minecraft.block.Block;
@@ -17,6 +18,7 @@ public class ModBlocks {
 	public static Block testBlock;
 	public static Block testOre;
 	public static Block testItemHolder;
+	public static Block testChest;
 	public static Block teleporter;
 
 	// Initialized all blocks
@@ -24,6 +26,7 @@ public class ModBlocks {
 		testBlock = new BlockTest();
 		testOre = new BlockTestOre();
 		testItemHolder = new BlockTestItemHolder();
+		testChest = new BlockTestChest();
 		teleporter = new BlockTeleporter();
 	}
 
@@ -32,6 +35,7 @@ public class ModBlocks {
 		registerBlock(testBlock);
 		registerBlock(testOre);
 		registerBlock(testItemHolder);
+		registerBlock(testChest);
 		registerBlock(teleporter);
 	}
 
@@ -48,6 +52,7 @@ public class ModBlocks {
 		registerRender(testBlock);
 		registerRender(testOre);
 		registerRender(testItemHolder);
+		registerRender(testChest);
 		registerRender(teleporter);
 	}
 

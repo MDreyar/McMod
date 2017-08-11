@@ -6,6 +6,7 @@ item.recall.name=Recall Device
 tile.testBlock.name=Testium Block
 tile.testOre.name=Testium Ore
 tile.testItemHolder.name=Testium Rod Storage
+tile.testChest.name=Testium Chest
 tile.teleporter.name=Teleporter
 
 itemGroup.tabDMRT=Dreyar's Many Random Things

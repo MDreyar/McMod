@@ -1,0 +1,21 @@
+{
+	"ambientocclusion": false,
+	"textures": {
+		"top": "dmrt:blocks/test_chest_top",
+		"front": "dmrt:blocks/test_chest_front",
+		"side": "dmrt:blocks/test_chest_side"
+	},
+	"elements": [
+        {  "from": [1, 0, 1],
+           "to": [15, 8, 15],
+           "faces": {
+               "down": {"uv": [ 1, 1, 15, 15], "texture": "#top"},
+               "up": {"uv": [ 1, 1, 15, 15], "texture": "#top"},
+               "north": {"uv": [ 1, 8, 15, 16], "texture": "#front"},
+               "south": {"uv": [ 1, 8, 15, 16], "texture": "#side"},
+               "west": {"uv": [ 1, 8, 15, 16], "texture": "#side"},
+               "east": {"uv": [ 1, 8, 15, 16], "texture": "#side"}
+           }
+        }
+    ]
+}
