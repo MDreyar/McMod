@@ -1,5 +1,7 @@
 package m_dreyar.dmrt;
 
+import org.apache.logging.log4j.Logger;
+
 import m_dreyar.dmrt.proxy.CommonProxy;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraftforge.fml.common.Mod;
@@ -16,12 +18,15 @@ public class Main {
 	public static CommonProxy proxy; // Contains a CommonProxy or ClientProxy
 
 	public static final CreativeTabs CREATIVETAB = new CreativeTab();
-	
+
+	public static Logger log;
+
 	@Mod.Instance(Reference.MOD_ID)
 	public static Main instance;
 
 	@EventHandler
 	public static void preInit(FMLPreInitializationEvent event) {
+		log = event.getModLog();
 		proxy.preInit();
 	}
 

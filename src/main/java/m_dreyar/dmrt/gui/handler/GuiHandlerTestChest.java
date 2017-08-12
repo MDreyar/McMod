@@ -1,6 +1,6 @@
-package m_dreyar.dmrt;
+package m_dreyar.dmrt.gui.handler;
 
-import m_dreyar.dmrt.gui.ContainerTestChest;
+import m_dreyar.dmrt.container.ContainerTestChest;
 import m_dreyar.dmrt.gui.GuiTestChest;
 import m_dreyar.dmrt.tileentity.TileEntityTestChest;
 import net.minecraft.entity.player.EntityPlayer;
@@ -9,7 +9,7 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 import net.minecraftforge.fml.common.network.IGuiHandler;
 
-public class GuiHandler implements IGuiHandler {
+public class GuiHandlerTestChest implements IGuiHandler {
 
 	private final static int TESTCHEST = 1;
 	

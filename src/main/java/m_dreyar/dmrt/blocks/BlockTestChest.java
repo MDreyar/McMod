@@ -1,6 +1,5 @@
 package m_dreyar.dmrt.blocks;
 
-import m_dreyar.dmrt.GuiHandler;
 import m_dreyar.dmrt.Main;
 import m_dreyar.dmrt.Reference;
 import m_dreyar.dmrt.tileentity.TileEntityTestChest;
@@ -38,7 +37,7 @@ public class BlockTestChest extends BlockContainer {
 	@Override
 	public boolean onBlockActivated(World worldIn, BlockPos pos, IBlockState state, EntityPlayer playerIn, EnumHand hand, EnumFacing facing, float hitX, float hitY, float hitZ) {
 		if (!worldIn.isRemote) {
-			playerIn.openGui(Main.instance, GuiHandler.getGuiId(), worldIn, pos.getX(), pos.getY(), pos.getZ());
+			playerIn.openGui(Main.instance, Reference.GuiHandlers.TESTCHEST.getGuiID(), worldIn, pos.getX(), pos.getY(), pos.getZ());
 		}
 		return true;
 	}

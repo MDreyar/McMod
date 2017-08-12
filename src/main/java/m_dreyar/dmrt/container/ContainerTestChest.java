@@ -1,4 +1,4 @@
-package m_dreyar.dmrt.gui;
+package m_dreyar.dmrt.container;
 
 import m_dreyar.dmrt.tileentity.TileEntityTestChest;
 import net.minecraft.entity.player.EntityPlayer;

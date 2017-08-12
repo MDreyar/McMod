@@ -1,5 +1,8 @@
 package m_dreyar.dmrt;
 
+import m_dreyar.dmrt.gui.handler.GuiHandlerTestChest;
+import net.minecraftforge.fml.common.network.IGuiHandler;
+
 // Holds references for easy updating
 public class Reference {
 
@@ -35,7 +38,7 @@ public class Reference {
 	public static enum Blocks {
 		TESTBLOCK("testBlock", "test_block"), TESTORE("testOre", "test_ore"),
 		TESTITEMHOLDER("testItemHolder", "test_item_holder"), TESTCHEST("testChest", "test_chest"),
-		TELEPORTER("teleporter", "teleporter");
+		TESTFURNACE("testFurnace", "test_furnace"), TELEPORTER("teleporter", "teleporter");
 
 		private String unlocalizedName;
 		private String registryName;
@@ -51,6 +54,26 @@ public class Reference {
 
 		public String getUnlocalizedName() {
 			return unlocalizedName;
+		}
+	}
+	
+	public static enum GuiHandlers {
+		TESTCHEST(new GuiHandlerTestChest(), 1);
+		
+		private IGuiHandler guiHandler;
+		private int guiID;
+		
+		GuiHandlers(IGuiHandler guiHandler, int guiID){
+			this.guiHandler = guiHandler;
+			this.guiID = guiID;
+		}
+		
+		public IGuiHandler getGuiHandler(){
+			return guiHandler;
+		}
+		
+		public int getGuiID(){
+			return guiID;
 		}
 	}
 }

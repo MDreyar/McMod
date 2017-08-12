@@ -3,6 +3,7 @@ package m_dreyar.dmrt.gui;
 import java.awt.Color;
 
 import m_dreyar.dmrt.Reference;
+import m_dreyar.dmrt.container.ContainerTestChest;
 import m_dreyar.dmrt.tileentity.TileEntityTestChest;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.inventory.GuiContainer;
